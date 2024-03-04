@@ -27,34 +27,56 @@ function btnClicked() {
 
 // Menu Option Functions
 function traverseSurveyData() {
-  // Traverse the surveyData array to:
-  // Count the number of "Yes" responses,
-  // Count the number of "No" responses,
-  // Count the number of "Maybe" responses,
-  // and output the results in the outputEl.
-
   outputEl.innerHTML = "Survey Data";
-  console.log(surveyData);
+  var list1 = [];
+  var list2 = [];
+  var list3 = [];
+  for (var i = 0; i < surveyData.length; i++) {
+    if (surveyData[i] === "Yes") {
+      list1.push(surveyData[i]);
+    }
+    else if (surveyData[i] === "No") {
+      list2.push(surveyData[i]);
+    } else {
+      list3.push(surveyData[i]);
+    }
+  }
+  console.log("Yes ("+ String(list1.length) + ") No ("+ String(list2.length)+ ") Maybe ("+ String(list3.length)+")");
 }
 
 function traverseAgeData() {
-  // Traverse the ageData array to:
-  // Count the number of ages under 18,
-  // Count the number of ages between 18 and 35, inclusive
-  // Count the number of ages between 36 and 65, inclusive
-  // Count the number of ages above 65,
-  // and output the results in the outputEl.
-
   outputEl.innerHTML = "Age Data";
-  console.log(ageData);
+  var list1 = [];
+  var list2 = [];
+  var list3 = [];
+  var list4 = [];
+  for (var i = 0; i < ageData.length; i++) {
+    if (ageData[i] < 18) {
+      list1.push(ageData[i]);
+    }
+    else if (ageData[i] <= 35) {
+      list2.push(ageData[i]);
+    }
+    else if (ageData[i] <= 65) {
+      list3.push(ageData[i]);
+    }
+    else {
+      list4.push(ageData[i]);
+    }
+  }
+  console.log("Under 18:", list1.length, "18 to 35:", list2.length, "36 to 65:", list3.length, "Above 65:", list4.length);
 }
 
 function traverseNumberData() {
-  // Traverse the numberData array to:
-  // Count the number of even numbers,
-  // Count the number of odd numbers,
-  // and output the results in the outputEl.
-
   outputEl.innerHTML = "Number Data";
-  console.log(numberData);
+  var evenList = [];
+  var oddList = [];
+  for (var i = 0; i < numberData.length; i++) {
+    if ((numberData[i] % 2) === 0) {
+      evenList.push(numberData[i]);  }
+    else {
+      oddList.push(numberData[i]);  }
+  }
+  console.log("even:", evenList.length);
+  console.log("odd:", oddList.length);  
 }
