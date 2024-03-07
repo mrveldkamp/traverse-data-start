@@ -34,14 +34,20 @@ function traverseSurveyData() {
   for (var i = 0; i < surveyData.length; i++) {
     if (surveyData[i] === "Yes") {
       list1.push(surveyData[i]);
-    }
-    else if (surveyData[i] === "No") {
+    } else if (surveyData[i] === "No") {
       list2.push(surveyData[i]);
     } else {
       list3.push(surveyData[i]);
     }
   }
-  console.log("Yes ("+ String(list1.length) + ") No ("+ String(list2.length)+ ") Maybe ("+ String(list3.length)+")");
+  console.log(
+    "Yes:",
+    list1.length,
+    "No:",
+    list2.length,
+    "Maybe:",
+    list3.length
+  );
 }
 
 function traverseAgeData() {
@@ -53,18 +59,24 @@ function traverseAgeData() {
   for (var i = 0; i < ageData.length; i++) {
     if (ageData[i] < 18) {
       list1.push(ageData[i]);
-    }
-    else if (ageData[i] <= 35) {
+    } else if (ageData[i] <= 35) {
       list2.push(ageData[i]);
-    }
-    else if (ageData[i] <= 65) {
+    } else if (ageData[i] <= 65) {
       list3.push(ageData[i]);
-    }
-    else {
+    } else {
       list4.push(ageData[i]);
     }
   }
-  console.log("Under 18:", list1.length, "18 to 35:", list2.length, "36 to 65:", list3.length, "Above 65:", list4.length);
+  console.log(
+    "Under 18:",
+    list1.length,
+    "18 to 35:",
+    list2.length,
+    "36 to 65:",
+    list3.length,
+    "Above 65:",
+    list4.length
+  );
 }
 
 function traverseNumberData() {
@@ -72,11 +84,12 @@ function traverseNumberData() {
   var evenList = [];
   var oddList = [];
   for (var i = 0; i < numberData.length; i++) {
-    if ((numberData[i] % 2) === 0) {
-      evenList.push(numberData[i]);  }
-    else {
-      oddList.push(numberData[i]);  }
+    if (numberData[i] % 2 === 0) {
+      evenList.push(numberData[i]);
+    } else {
+      oddList.push(numberData[i]);
+    }
   }
   console.log("even:", evenList.length);
-  console.log("odd:", oddList.length);  
+  console.log("odd:", oddList.length);
 }
