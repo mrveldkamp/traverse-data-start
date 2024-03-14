@@ -28,9 +28,9 @@ function btnClicked() {
 // Menu Option Functions
 function traverseSurveyData() {
   outputEl.innerHTML = "Survey Data";
-  var list1 = [];
-  var list2 = [];
-  var list3 = [];
+  let list1 = [];
+  let list2 = [];
+  let list3 = [];
   for (let i = 0; i < surveyData.length; i++) {
     if (surveyData[i] === "Yes") {
       list1.push(surveyData[i]);
@@ -52,10 +52,10 @@ function traverseSurveyData() {
 
 function traverseAgeData() {
   outputEl.innerHTML = "Age Data";
-  var list1 = [];
-  var list2 = [];
-  var list3 = [];
-  var list4 = [];
+  let list1 = [];
+  let list2 = [];
+  let list3 = [];
+  let list4 = [];
   for (let i = 0; i < ageData.length; i++) {
     if (ageData[i] < 18) {
       list1.push(ageData[i]);
