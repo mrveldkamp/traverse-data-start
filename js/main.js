@@ -31,7 +31,7 @@ function traverseSurveyData() {
   var list1 = [];
   var list2 = [];
   var list3 = [];
-  for (var i = 0; i < surveyData.length; i++) {
+  for (let i = 0; i < surveyData.length; i++) {
     if (surveyData[i] === "Yes") {
       list1.push(surveyData[i]);
     } else if (surveyData[i] === "No") {
@@ -56,7 +56,7 @@ function traverseAgeData() {
   var list2 = [];
   var list3 = [];
   var list4 = [];
-  for (var i = 0; i < ageData.length; i++) {
+  for (let i = 0; i < ageData.length; i++) {
     if (ageData[i] < 18) {
       list1.push(ageData[i]);
     } else if (ageData[i] <= 35) {
@@ -81,8 +81,8 @@ function traverseAgeData() {
 
 function traverseNumberData() {
   outputEl.innerHTML = "Number Data";
-  var evenList = [];
-  var oddList = [];
+  let evenList = [];
+  let oddList = [];
   for (var i = 0; i < numberData.length; i++) {
     if (numberData[i] % 2 === 0) {
       evenList.push(numberData[i]);
