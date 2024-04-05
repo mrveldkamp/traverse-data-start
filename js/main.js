@@ -68,14 +68,16 @@ function traverseAgeData() {
     }
   }
 
-  (outputEl.innerHTML = "Under 18:"),
+  console.log(
+    "Under 18:",
     list1.length,
     "18 to 35:",
     list2.length,
     "36 to 65:",
     list3.length,
     "Above 65:",
-    list4.length;
+    list4.length
+  );
 }
 
 function traverseNumberData() {
@@ -90,5 +92,5 @@ function traverseNumberData() {
     }
   }
 }
-(document.getElementById("output").innerHTML = "even:"), evenList.length;
-(document.getElementById("output").innerHTML = "odd:"), oddList.length;
+console.log("even:", evenList.length);
+console.log("odd:", oddList.length);
